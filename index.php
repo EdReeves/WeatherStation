@@ -12,7 +12,7 @@
 //}
 //ob_start(); // start the output buffer
 
-$con=mysqli_connect("localhost","monitor","weatherstation","weatherdata");
+$con=mysqli_connect("localhost","XXX","XXX","XXX");
         //check connection
         if (mysqli_connect_errno()) {
           echo "failed" . mysqli_connect_error();
