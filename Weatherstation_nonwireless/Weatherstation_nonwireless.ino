@@ -51,7 +51,7 @@ void setup() {
      digitalWrite(ANEMOMETER, HIGH);
      pinMode(RAINGAUGE, INPUT);
      digitalWrite(RAINGAUGE, HIGH);
-     attachInterrupt(1,CountRain, LOW);
+     attachInterrupt(1,CountRain, FALLING);
      dht.begin();
      pressure.begin();
      
@@ -59,7 +59,6 @@ void setup() {
 }
 
 void loop() {
-  attachInterrupt(1,CountRain, LOW);
   broadcast();
   delay(60000);
   
@@ -86,7 +85,6 @@ void broadcast() {
 
 void CountRain() {
   raintips++;
-  detachInterrupt(1);
 }
 
 void calcWindDir() {
