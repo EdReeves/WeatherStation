@@ -12,7 +12,7 @@
 
 <script src="wind/windrose.js"></script>
 <?php
-$json = file_get_contents("JSON/Windrose_data.json"); 
+$json = file_get_contents("JSON/windrose_data.json"); 
 $data2 = json_decode($json,true);
 
 ?>
@@ -58,9 +58,9 @@ function iCheck() //User Agent checker courtesy of Andrew Hedges http://davidwal
     </div>
     <nav>
       <ul>
-        <li><a href="index.php">Temperature & Pressure</a></li>
-        <li><a href="humidity-rainfall.php">Humidity & Rainfall</a></li>
-        <li><a href="wind.php">WindSpeed & Wind Direction</a></li>
+        <li><a href="index.php">Temperature &amp; Pressure</a></li>
+        <li><a href="humidity-rainfall.php">Humidity &amp; Rainfall</a></li>
+        <li><a href="wind.php">WindSpeed &amp; Wind Direction</a></li>
         <li class="last"><a href="old_site/oldsite.php">Previous Website</a></li>
       </ul>
     </nav>
