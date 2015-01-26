@@ -72,7 +72,7 @@ $(function () {
 });
 
 $(function () {
-    $.getJSON('JSON/Rainfall_data.json', function (data) {
+    $.getJSON('JSON/Rainfall_Data.json', function (data) {
 
         // create the chart
         $('#rainfallchart').highcharts('StockChart', {
@@ -114,7 +114,7 @@ $(function () {
             },
 
             title: {
-                text: 'Rainfall Readins'
+                text: 'Rainfall Readings'
             },
 
              yAxis : {
