@@ -1,5 +1,5 @@
 $(function () {
-    $.getJSON('JSON/Temperature_data.json', function (data) {
+    $.getJSON('JSON/Temperature_Data.json', function (data) {
 
         // Create the chart
         $('#temp').highcharts('StockChart', {
@@ -138,10 +138,10 @@ $(function () {
                     text : 'Pressuree (mB)'
                 },
                 plotLines : [{
-                    value : 0,
+                    value : 1032.5,
                     color : 'black',
                     dashStyle : 'shortdash',
-                    width : 2
+                    width : 1
                     
                 }]
             },
