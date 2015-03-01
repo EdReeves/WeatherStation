@@ -17,6 +17,9 @@
   
     Arduino Mega 2560.
     Arduino Ethernet Shield. 
+    
+   Issues: 
+   Wind measurement may still be problematic. 
 */
 
 
@@ -66,7 +69,7 @@ unsigned long NextRev; //The minimum time of the next expected anemometer activa
 uint8_t Last3Secs = 0; //Number of revs in the last 3 seconds.
 float avgWind; //The average windspeed in the measuring period. 
 float MaxGust; //The highest 3 second wind speed (Gust) in the measuring period.
-float MinLull; //The lowest 3 second wind speed (Lull) in the measuring period.
+float MinLull = 100; //The lowest 3 second wind speed (Lull) in the measuring period. 
 unsigned long NextSecReading = 3000; // 3 second readings for wind speed.
 unsigned long NextWindAvg = 5000; //10 min period for average windspeed measurement.
 const uint32_t AVGPERIOD = 600000; //Time over which wind averages are taken. 600000 = 10 minutes.
@@ -131,7 +134,7 @@ void loop() {
     html_POST_wind(avgWind, MaxGust, MinLull);
     avgWind = 0; //reset
     MaxGust = 0; //reset
-    MinLull = 0; //reset
+    MinLull = 100; //reset
     
   }   
 }
@@ -269,7 +272,7 @@ void senddata(String DataString, int dest) {
 	} 
 }
 
-void html_POST_wind(int AVGwind, int MaxGust, int Minlull) {
+void html_POST_wind(float AVGwind, float MaxGust, float Minlull) {
  
   DataWind += F("&avgWind=");
   DataWind.concat(AVGwind);
