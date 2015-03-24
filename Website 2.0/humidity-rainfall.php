@@ -7,7 +7,7 @@
 <?php include 'humidity_rainfall/Humidity_Rainfall_Update.php';?>
 <?php include 'other/Textdata_update.php';?>
 <?php include 'other/Gather_Data.php';?>
-
+<script src="/grid-light.js"></script>
 <script src="humidity_rainfall/Humidity_Rainfall_Chart.js"></script>
 
 
@@ -74,7 +74,7 @@ function iCheck() //User Agent checker courtesy of Andrew Hedges http://davidwal
           <P>Current Temperature: <?php echo $data['temperature'];?>&deg;C</p>
           <P>Current Pressure: <?php echo $data['pressure'];?> mB</p>
           <P>Current Humidity: <?php echo $data['humidity'];?>%</p>
-          <P>Current Windspeed: <?php echo $data['WindSpeed'];?>m/s</p>
+          <P>Current Average Windspeed: <?php echo $data['WindSpeed'];?>m/s</p>
           <p>Current Wind Direction: <?php echo $data['WindDirection'];?></p>
           <P>Today's Rainfall: <?php echo $data['rainfall'];?>mm</p>
           <P>Station Uptime: <?php echo $data['DiffDate'];?> days</p>

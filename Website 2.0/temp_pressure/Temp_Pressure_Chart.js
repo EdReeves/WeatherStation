@@ -66,10 +66,27 @@ $(function () {
                 }]
             },
 
+            tooltip: {
+                    crosshairs: [{
+                        width: 1,
+                        color: 'gray',
+                        dashStyle: 'shortdot'
+                    }, {
+                        width: 2,
+                        color: 'gray',
+                        dashStyle: 'shortdot'
+            }],
+                    headerFormat: '<small>{point.key}</small><table><br/>',
+                    pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> <br/>',
+                    valueSuffix: ' Celcius',
+                    valueDecimals: 2
+                },
+
             series : [{
                 name : 'Temperature (celcius)',
                 data : data,
                 id : 'dataseries'
+                
 
             
             }, ]
@@ -145,6 +162,22 @@ $(function () {
                     
                 }]
             },
+
+            tooltip: {
+                    crosshairs: [{
+                        width: 1,
+                        color: 'gray',
+                        dashStyle: 'shortdot'
+                    }, {
+                        width: 2,
+                        color: 'gray',
+                        dashStyle: 'shortdot'
+            }],
+                    headerFormat: '<small>{point.key}</small><table><br/>',
+                    pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> <br/>',
+                    valueSuffix: ' mB',
+                    valueDecimals: 2
+                },
 
             series : [{
                 name : 'Pressuree (mB)',

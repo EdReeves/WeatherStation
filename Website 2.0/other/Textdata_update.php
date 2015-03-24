@@ -11,12 +11,19 @@ while($row =mysqli_fetch_array($result)) {
 	$arr['ID']= $row[0];
 	$arr['UNIXTIME']= $row[1];
 	$arr['ttime']=$row[3];
-	$arr['WindSpeed']= $row[4];
+	//$arr['WindSpeed']= $row[4];
 	$arr['WindDirection']= $row[5];
 	$arr['temperature']=$row[6];
 	$arr['pressure']= $row[7];
 	$arr['humidity']= $row[8];
 	
+}
+
+$wind_result = mysqli_query($con, "SELECT AVGwind FROM `Wind`  ORDER BY ID DESC LIMIT 1");
+
+while($row =mysqli_fetch_array($wind_result)) {
+
+$arr['WindSpeed']=round($row[0],2);
 }
 
 $rain_result = mysqli_query($con, "SELECT SUM(Rainfall) FROM `tempdat2` WHERE `tdate`= CURDATE()");

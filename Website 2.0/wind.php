@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://code.highcharts.com/stock/highstock.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/highcharts-more.js"></script>
 <script src="http://code.highcharts.com/modules/data.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
-
+<script src="/grid-light.js"></script>
 <?php include 'wind/Windrose_Update.php';?>
 <?php include 'other/Textdata_Update.php';?>
 <?php include 'other/Gather_Data.php';?>
-
+<?php include "wind/windupdate.php";?>
+<script src="wind/Wind_Chart.js"></script>
 <script src="wind/windrose.js"></script>
 <?php
 $json = file_get_contents("JSON/windrose_data.json"); 
@@ -80,7 +82,7 @@ function iCheck() //User Agent checker courtesy of Andrew Hedges http://davidwal
           <P>Current Temperature: <?php echo $data['temperature'];?>&deg;C</p>
           <P>Current Pressure: <?php echo $data['pressure'];?> mB</p>
           <P>Current Humidity: <?php echo $data['humidity'];?>%</p>
-          <P>Current Windspeed: <?php echo $data['WindSpeed'];?>m/s</p>
+          <P>Current Average Windspeed: <?php echo $data['WindSpeed'];?>m/s</p>
           <p>Current Wind Direction: <?php echo $data['WindDirection'];?></p>
           <P>Today's Rainfall: <?php echo $data['rainfall'];?>mm</p>
           <P>Station Uptime: <?php echo $data['DiffDate'];?> days</p>
@@ -105,6 +107,10 @@ function iCheck() //User Agent checker courtesy of Andrew Hedges http://davidwal
     </aside>
     <!-- main content -->
     <div id="content">
+      
+      <div id="WindChart" style="height: 450px; min-width: 310px"></div>
+      
+
       <div id="windrose" style="min-width: 420px; max-width: 600px; height: 400px; margin: 0 auto"></div>
       <div style="display:none">
   <!-- Source: http://or.water.usgs.gov/cgi-bin/grapher/graph_windrose.pl -->

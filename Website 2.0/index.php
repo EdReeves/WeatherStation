@@ -3,7 +3,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="http://code.highcharts.com/stock/highstock.js"></script>
 <script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
-
+<script src="/grid-light.js"></script>
 <?php include 'temp_pressure/Temp_Pressure_update.php';?>  
 <?php include 'other/Textdata_update.php';?>
 <?php include 'other/Gather_Data.php';?>
@@ -74,7 +74,7 @@ function iCheck() //User Agent checker courtesy of Andrew Hedges http://davidwal
           <P>Current Temperature: <?php echo $data['temperature'];?>&deg;C</p>
           <P>Current Pressure: <?php echo $data['pressure'];?> mB</p>
           <P>Current Humidity: <?php echo $data['humidity'];?>%</p>
-          <P>Current Windspeed: <?php echo $data['WindSpeed'];?>m/s</p>
+          <P>Current Average Windspeed: <?php echo $data['WindSpeed'];?>m/s</p>
           <p>Current Wind Direction: <?php echo $data['WindDirection'];?></p>
           <P>Today's Rainfall: <?php echo $data['rainfall'];?>mm</p>
           <P>Station Uptime: <?php echo $data['DiffDate'];?> days</p>

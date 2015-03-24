@@ -46,12 +46,7 @@ $(function () {
                 text : 'Humidity Readings'
             },
 
-            tooltip: {
-                style: {
-                    width: '200px'
-                },
-                valueDecimals: 4
-            },
+            
 
             yAxis : {
                 title : {
@@ -59,7 +54,21 @@ $(function () {
                 },
                 
             },
-
+            tooltip: {
+                    crosshairs: [{
+                        width: 1,
+                        color: 'gray',
+                        dashStyle: 'shortdot'
+                    }, {
+                        width: 2,
+                        color: 'gray',
+                        dashStyle: 'shortdot'
+            }],
+                    headerFormat: '<small>{point.key}</small><table><br/>',
+                    pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> <br/>',
+                    valueSuffix: ' %',
+                    valueDecimals: 0
+                },
             series : [{
                 name : 'Humdity (%)',
                 data : data,
