@@ -15,7 +15,7 @@
 <script type="text/javascript">
 <!-- 
 if (screen.width <= 699) {
-document.location = "mobile.php";
+document.location = "old_site/oldsite.php";
 }
 function iCheck() //User Agent checker courtesy of Andrew Hedges http://davidwalsh.name/detect-ipad
 {
@@ -27,7 +27,7 @@ function iCheck() //User Agent checker courtesy of Andrew Hedges http://davidwal
 
     if(isiPad || isiPhone || isiPod || isnexus)
     {
-        document.location = "google.com";
+        document.location = "old_site/oldsite.php";
     }
 }
 //-->
