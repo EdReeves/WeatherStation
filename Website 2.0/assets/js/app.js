@@ -1,9 +1,11 @@
 $(function () {
+	
 	Highcharts.setOptions({
 		global: {
 			useUTC: false
 		}
 	});
+	
 	// Load stats template
 	$.getJSON('/json/misc.json', function (data) {
 		$.get('/assets/templates/stats.mustache', function (template) {
