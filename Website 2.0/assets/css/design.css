@@ -1,0 +1,93 @@
+* {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	color: #222;
+	font: 100%/1.5em Helvetica, Arial, sans-serif;
+}
+
+header {
+	background: rgb(235, 235, 235);
+	padding: 1em;
+}
+	header hgroup {
+
+	}
+		header hgroup h1 a {
+			color: black;
+			text-decoration: none;
+		}
+		header hgroup h3 {
+			font-size: 1em;
+			font-weight: normal;
+			margin-top: 0.5em;
+		}
+	header nav {
+		overflow: hidden;
+		position: absolute;
+		right: 1em;
+		top: 1em;
+	}
+		header nav a {
+			background: rgb(215, 215, 215);
+			border-radius: 3px;
+			color: black;
+			display: block;
+			float: left;
+			margin-left: 1em;
+			padding: 0.25em 0.5em;
+		}
+
+section.stats {
+	border-right: 1px solid rgb(235, 235, 235);
+	float: left;
+	font-size: 0.9em;
+	padding: 0 1em 1em;
+	width: 25%;
+}
+	section.stats h2 {
+		margin-top: 1em;
+	}
+	section.stats ul {
+		list-style-position: inside;
+	}
+		section.stats ul li {
+			margin-top: 0.1em;
+		}
+
+section.content {
+	float: right;
+	padding: 0 1em 1em;
+	width: 75%;
+}
+	section.content div.chart {
+		margin-top: 1em;
+	}
+
+@media screen and (max-width: 800px) {
+
+	header nav {
+		position: relative;
+		right: auto;
+		top: auto;
+	}
+		header nav a {
+			float: none;
+			margin-left: 0;
+			margin-top: 1em;
+		}
+
+	section.stats {
+		border-right: 0;
+	}
+
+	section.stats, section.content {
+		float: none;
+		width: auto;
+	}
+
+}

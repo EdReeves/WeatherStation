@@ -64,10 +64,9 @@ Highcharts.theme = {
 		}
 	},
 
-
 	// General
 	background2: '#F0F0EA'
-	
+
 };
 
 // Apply the theme

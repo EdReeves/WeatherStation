@@ -1,0 +1,26 @@
+<script id="statsTemplate" type="text/html">
+
+	<h2 class="title">Measured data</h2>
+	<ul>
+		<li>Last Reading at: {{ last-reading }}</li>
+		<li>Current Temperature: {{ current-temperature }}&deg;C</li>
+		<li>Current Pressure: {{ current-pressure }} mB</li>
+		<li>Current Humidity: {{ current-humidity }}%</li>
+		<li>Current Average Windspeed: {{ current-wind-average }}m/s</li>
+		<li>Current Wind Direction: {{ current-wind-direction }}</li>
+		<li>Today's Rainfall: {{ todays-rainfall }}mm</li>
+		<li>Station Uptime: {{ uptime }} days</li>
+	</ul>
+	<h2 class="title">Calculated Data</h2>
+	<ul>
+		<li>Sunrise: {{ sunrise }}</li>
+		<li>Sunset: {{ sunset }}</li>
+		<li>Today's Average: {{ todays-temperature-average }}&deg;C</li>
+		<li>Today's High: {{ todays-temperature-high.value }}&deg;C at {{ todays-temperature-high.time }}</li>
+		<li>Today's Low: {{ todays-temperature-low.value }}&deg;C at {{ todays-temperature-low.time }}</li>
+		<li>Dew point: {{ current-dew-point }}&deg;C</li>
+		<li>Cloud base: {{ current-cloud-base }} meters</li>
+		<li>Wind chill: {{ current-wind-chill }}&deg;C</li>
+	</ul>
+
+</script>
